@@ -20,8 +20,13 @@ Route::get('/', function () {
     //$post->content = "test content";
     //$post->save();
 
-    Post::create([
-        'title' => 'created title',
-        'content' => 'created content',
-    ]);
+    //Post::create([
+        //'title' => 'created title',
+        //'content' => 'created content',
+    //]);
+
+    $post = Post::find(1);
+    echo '標題： '.$post->title.'<br>';
+    echo '內容： '.$post->content.'<br>';
+    dd($post);
 });
