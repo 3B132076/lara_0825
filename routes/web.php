@@ -43,10 +43,14 @@ Route::get('/', function () {
     //$posts = Post::where('id','<','10')->orderBy('id','DESC')->get();
     //dd($posts);
 
-    $post = Post::find(1);
+    /*$post = Post::find(1);
     $post->update([
         'title' => 'updated title',
         'content' => 'updated content',
     ]);
-    dd($post);
+    dd($post);*/
+
+    $post->title = 'saved title';
+    $post->content = 'saved content';
+    $post->save();
 });
